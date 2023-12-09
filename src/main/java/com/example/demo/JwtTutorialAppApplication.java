@@ -33,13 +33,13 @@ public class JwtTutorialAppApplication {
 			userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
 
 			userService.saveUser(
-					new AppUser(null, "John Travolta", "john", "1234", new ArrayList<>()));
+					new AppUser(null, "John Travolta", "john", "1234", new ArrayList<>(), new ArrayList<>()));
 			userService.saveUser(
-					new AppUser(null, "Will Smith", "will", "1234", new ArrayList<>()));
+					new AppUser(null, "Will Smith", "will", "1234", new ArrayList<>(), new ArrayList<>()));
 			userService.saveUser(
-					new AppUser(null, "Jim Carry", "jim", "1234", new ArrayList<>()));
+					new AppUser(null, "Jim Carry", "jim", "1234", new ArrayList<>(), new ArrayList<>()));
 			userService.saveUser(
-					new AppUser(null, "Tom Hardy", "tom", "1234", new ArrayList<>()));
+					new AppUser(null, "Tom Hardy", "tom", "1234", new ArrayList<>(), new ArrayList<>()));
 
 			userService.addRoleToUser("john", "ROLE_USER");
 			userService.addRoleToUser("john", "ROLE_MANAGER");

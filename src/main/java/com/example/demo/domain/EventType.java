@@ -1,21 +1,20 @@
 package com.example.demo.domain;
 
-import lombok.*;
-
 import javax.persistence.*;
+import java.util.List;
 
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "role")
-public class Role {
+@Table(name = "event_type")
+public class EventType {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
 
-    @Column (name = "name")
+    @Column(name = "name")
     private String name;
+
+    @OneToMany(mappedBy = "type")
+    private List<Event> events;
 }

@@ -31,6 +31,7 @@ import static org.springframework.http.HttpStatus.FORBIDDEN;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Slf4j
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
